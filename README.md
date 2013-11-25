@@ -1,5 +1,5 @@
 [![Build status](https://travis-ci.org/lgersman/orangevolt-docp.png?branch=master)](https://travis-ci.org/lgersman/orangevolt-macrop) 
-[![Dependency status](https://gemnasium.com/lgersman/orangevolt-docp.png)](https://gemnasium.com/lgersman/orangevolt-macrop)
+[![Dependency status](https://gemnasium.com/lgersman/orangevolt-macrop.png)](https://gemnasium.com/lgersman/orangevolt-macrop)
 [![NPM version](https://badge.fury.io/js/orangevolt-macrop.png)](http://badge.fury.io/js/orangevolt-macrop)
 
 **[orangevolt-macrop]** provides a [NPM] module **and** browser script suitable for parsing extended [Creole Wiki generic extension elements](http://wikicreole.org/wiki/GenericExtensionElementProposal) (the *"Double-less-than-greater-than"* notation to be concrete). 
