@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/lgersman/orangevolt-docp.png?branch=master)](https://travis-ci.org/lgersman/orangevolt-macrop) 
+[![Build status](https://travis-ci.org/lgersman/orangevolt-macrop.png)](https://travis-ci.org/lgersman/orangevolt-macrop) 
 [![Dependency status](https://gemnasium.com/lgersman/orangevolt-macrop.png)](https://gemnasium.com/lgersman/orangevolt-macrop)
 [![NPM version](https://badge.fury.io/js/orangevolt-macrop.png)](http://badge.fury.io/js/orangevolt-macrop)
 
