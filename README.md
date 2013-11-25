@@ -260,7 +260,7 @@ Navigate in the opened browser window to folder ``spec`` (``http://localhost:909
 [NPM]: 			https://npmjs.org/ 
 [NodeJs]:		http://nodejs.org/
 [gfm]: 			http://github.github.com/github-flavored-markdown/ "Github Flavored Markdown"
-[Markdown]:	 	http://daringfireball.net/projects/markdown/syntax
+[Markdown]:	 	http://daringfireball.net/projects/markdown/syntax/
 [LiveReload]: 	http://livereload.com/
 [Grunt]: 		http://gruntjs.com/ "GruntJS"
 [orangevolt-macrop]:		https://github.com/lgersman/orangevolt-macrop "Orangevolt Macrop"
