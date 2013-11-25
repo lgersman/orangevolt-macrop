@@ -8,7 +8,7 @@
 
 # What is it good for ?
 
-When generating HTML (or even text) you can utilize **[orangevolt-macrop]** to inject *something* using macros, no matter what kind of source text you use ([markdown], [gfm] or just HTML).
+When generating HTML (or even text) you can utilize **[orangevolt-macrop]** to inject *something* using macros, no matter what kind of source text you use ([Markdown], [gfm] or just HTML).
 
 The package provides an [API](#api) to parse text and a higher level method to encapsulate the parser and your macros.
 
@@ -252,7 +252,7 @@ Navigate in the opened browser window to folder ``spec`` (``http://localhost:909
 
 # License
 
-**[macrop]** is dual licensed under
+**[orangevolt-macrop]** is dual licensed under
 
 * [MIT](http://www.opensource.org/licenses/MIT)
 * [GPL2](http://www.opensource.org/licenses/GPL-2.0)
