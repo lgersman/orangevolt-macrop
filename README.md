@@ -8,7 +8,7 @@
 
 # What is it good for ?
 
-When generating HTML (or even text) you can utilize **[orangevolt-macrop]** to inject *something* using macros, no matter what kind of source text you use ([Markdown], [gfm] or just HTML).
+When generating HTML (or even text) you can utilize **[orangevolt-macrop]** to inject *something* using macros, no matter what kind of source text you use ( Markdown, [gfm] or just HTML).
 
 The package provides an [API](#api) to parse text and a higher level method to encapsulate the parser and your macros.
 
@@ -260,7 +260,6 @@ Navigate in the opened browser window to folder ``spec`` (``http://localhost:909
 [NPM]: 			https://npmjs.org/ 
 [NodeJs]:		http://nodejs.org/
 [gfm]: 			http://github.github.com/github-flavored-markdown/ "Github Flavored Markdown"
-[Markdown]:	 	http://daringfireball.net/projects/markdown/syntax/
 [LiveReload]: 	http://livereload.com/
 [Grunt]: 		http://gruntjs.com/ "GruntJS"
 [orangevolt-macrop]:		https://github.com/lgersman/orangevolt-macrop "Orangevolt Macrop"
