@@ -1,0 +1,47 @@
+{
+  "name": "orangevolt-macrop",
+  "version": "0.1.0",
+  "main": "./orangevolt-macrop.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.5",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib": "~0.8.0",
+    "grunt-jasmine-node": "~0.1.0",
+    "grunt-open": "~0.2.2"
+  },
+  "description": "A extensible macro parser/processor implementation recognizing creole style macros/extensions",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lgersman/orangevolt-macrop"
+  },
+  "keywords": [
+    "macro",
+    "processor"
+  ],
+  "author": {
+    "name": "Lars Gersmann",
+    "email": "lars.gersmann@gmail.com",
+    "url": "http://www.orangevolt.com"
+  },
+  "homepage": "https://github.com/lgersman/orangevolt-macrop",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/lgersman/orangevolt-macrop/master/LICENSE-MIT"
+    },
+    {
+      "type": "GNU",
+      "url": "https://raw.github.com/lgersman/orangevolt-macrop/master/LICENSE-GNU"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "browser" : "./orangevolt-macrop.js"
+}
