@@ -1,0 +1,9 @@
+spec/
+node-modules/
+.grunt/
+Gruntfile.js
+.npmignore
+orangevolt-macrop-0.1.0.tgz
+.gitignore
+npm-debug.log
+CONTRIBUTING.md
