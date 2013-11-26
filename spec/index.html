@@ -28,6 +28,7 @@
 
 				jasmineEnv.updateInterval = 1000;
 				jasmineEnv.addReporter( reporter);
+				jasmineEnv.addReporter( new jasmine.TapReporter());
 
 				jasmineEnv.specFilter = function( spec) {
 					return reporter.specFilter( spec);
