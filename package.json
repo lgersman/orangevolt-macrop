@@ -8,8 +8,7 @@
     "grunt-contrib": "~0.8.0",
     "grunt-jasmine-node": "~0.1.0",
     "grunt-open": "~0.2.2",
-    "grunt-cli": "~0.1.11",
-    "tape": "~2.3.0"
+    "grunt-cli": "~0.1.11"
   },
   "description": "A extensible macro parser/processor implementation recognizing creole style macros/extensions",
   "scripts": {
@@ -42,17 +41,5 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "browser": "./orangevolt-macrop.js",
-  "testling": {
-    "scripts": "spec/orangevolt-macrop.coffee",
-    "browsers": {
-      "ie": [ 6, 7, 8, 9, 10 ],
-      "ff": [ 12, 13, 14, 15, 16, 17 ],
-      "chrome": [ 20, 21, 22, 23 ],
-      "opera": [ 10, 11, 12 ],
-      "safari": [ 5.1, 6 ],
-      "iphone": [ 6 ],
-      "ipad": [ 6 ]
-    }
-  }
+  "browser": "./orangevolt-macrop.js"
 }
