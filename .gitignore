@@ -1,4 +1,4 @@
-/node-modules/
+/node_modules/
 /.grunt/
 /orangevolt-macrop-0.1.0.tgz
 /npm-debug.log
