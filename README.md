@@ -19,11 +19,14 @@ The package provides an [API](#api) to parse text and a higher level method to e
 An example:
 ````
 hello,
-<<mymacro foo bar="mee" john=doe/>>
+<<mymacro foo bar="mee" john=doe />>
 
-One more (abstruse) example : 
-<<ext-tool:jsdoc foo:sourcemy:foo foo-bar="mee" data-john=doe>>
-<</ext-tool:jsdoc>>
+Here is the example code : 
+
+<<highlight caption="javascript">>
+	var s = "hello world !";
+	console.log( s);
+<</highlight>>
 
 That's it !
 ````
@@ -31,20 +34,30 @@ That's it !
 **[orangevolt-macrop]** [API](#api) method ``parse( input)`` will split the input into strings and parsed macro objects :
 
 ````javascript
-[ 
-	"hello,\n", 
-	{ 
-		name : "mymacro", 
-		namespace : "",
-		attributes : { 
-			foo : true, 
-			bar :"mee",
-			john : "doe"
-		},
-		source : "<<mymacro foo bar=\"mee\" john=doe/>>"
-		contents : ""
-	},
-	"\n\nThat's it !\n"
+[
+  "hello,\n",
+  {
+    "source": "<<mymacro foo bar=\"mee\" john=doe />>",
+    "namespace": "",
+    "name": "mymacro",
+    "attributes": {
+      "foo": true,
+      "bar": "mee",
+      "john": "doe"
+    },
+    "content": ""
+  },
+  "\n\nHere is the example code : \n\n",
+  {
+    "source": "<<highlight caption=\"javascript\">>\n\tvar s = \"hello world !\";\n\tconsole.log( s);\n<</highlight>>",
+    "namespace": "",
+    "name": "highlight",
+    "attributes": {
+      "caption": "javascript"
+    },
+    "content": "\tvar s = \"hello world !\";\n\tconsole.log( s);"
+  },
+  "\n\nThat's it !"
 ]
 ````
 You can apply macros by simply iterating over the returned array and process the array contents.
@@ -229,14 +242,14 @@ to see the tests running utilizing [gruntjs live-reload feature](https://github.
 ## Caveats
 
 When ``grunt dev`` aborts with **Fatal error: watch ENOSPC** message you're system is getting out of 
-inotify watche handles. 
+inotify watch handles. 
 
 Go to the terminal and enter 
 
 ````
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ````
-to increase inotify watche handles (See http://stackoverflow.com/questions/16748737/grunt-watch-error-waiting-fatal-error-watch-enospc).
+to increase inotify watch handles (See http://stackoverflow.com/questions/16748737/grunt-watch-error-waiting-fatal-error-watch-enospc).
 
 # Testing
 
