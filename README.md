@@ -157,7 +157,9 @@ Include **[orangevolt-macrop]** in your web page :
 
 Now you can access the API using 
 
-``var macrop = window.orangevolt.macrop;``
+````
+var macrop = window.orangevolt.macrop;
+````
 
 ## orangevolt.macrop
 
