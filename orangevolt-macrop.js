@@ -1,5 +1,5 @@
 /*
- * Orangevolt Macrop processor implementing creole style extension parsing 
+ * Orangevolt Macrop processor implementing creole style extension parsing
  *
  * http://github.com/lgersman
  * http://www.orangevolt.com
@@ -15,8 +15,8 @@
 	;
 
 		/**
-		 * parse the attribute string 
-		 * 
+		 * parse the attribute string
+		 *
 		 * @param  {string} input the attribute string
 		 * @return {object} Object representing the string
 		 */
@@ -29,8 +29,8 @@
 				// adjust import
 			input = input.substring( match.index + match[0].length);
 			var name	= match[ 1],
-				val		= match[ 4]!=null || match[ 5]!=null || match[ 6]!=null ? 
-					(match[ 4] || match[ 5] || match[ 6]).replace(/^[\r\n]+|\s+$/g, '')
+				val		= match[ 4]!=null || match[ 5]!=null || match[ 6]!=null ?
+					(match[ 4] || match[ 5] || match[ 6] || "").replace(/^[\r\n]+|\s+$/g, '')
 					: true
 			;
 
@@ -38,7 +38,7 @@
 				attrs[ name] = (Array.isArray( attrs[ name]) ? attrs[ name] : [ attrs[ name]]);
 				attrs[ name].push( val);
 			} else {
-				attrs[ name] = val; 
+				attrs[ name] = val;
 			}
 		}
 
@@ -47,7 +47,7 @@
 
 		/**
 		 * parse a string into an ast
-		 * 
+		 *
 		 * @param  {string} the string to parse
 		 * @return {array}  Array of strings (non macro text) and objects representing the parsed macros
 		 */
@@ -60,7 +60,7 @@
 
 		while( match = input.match( TAG_REGEXP)) {
 			var node = {
-				source		: match[0],				
+				source		: match[0],
 				namespace   : match[2] || '',
 				name		: match[4],
 				attributes	: parseAttributes( match[5]),
@@ -79,7 +79,7 @@
 
 				// if macro has end tag
 			if( !match[10]) {
-					// scan for end tag 
+					// scan for end tag
 				match = input.match( new RegExp( '<<\/' + (node.namespace + node.name).replace( /\:/g, '\\:').replace( /\-/g, '\\-') + '>>'));
 				if( match) {
 					var content = input.substr( 0, match.index);
@@ -95,26 +95,26 @@
 				}
 
 				node.source += (match && match[0] || '');
-			} 
+			}
 
 			nodes.push( node);
 		}
 
-		input && nodes.push( input); 
+		input && nodes.push( input);
 
 		return nodes;
 	}
 
 		/**
-		 * process the nodes provided as argument and return the processed output. 
+		 * process the nodes provided as argument and return the processed output.
 		 * if an macro with no matching pendant in macros was found, the fallback macro handler get called.
-		 * 
+		 *
 		 * @param  {array} nodes array of string and objects returned by the parse function
 		 * @param  {object} macros object with keys naming the supported macros and functions handling the macros processing
 		 * if macros has a property '*' the function value will be taken as fallback for unknown macros.
 		 * if no fallback macro handle was provided the default macro handler will be be called (which will throw an exeption)
 		 * @param {object} options additional prosessing options
-		 * 
+		 *
 		 * @return {array} the processing result
 		 *
 		 * @see parse
@@ -153,13 +153,13 @@
 
 		/**
 		 * creates a reusable function encapsuulating the given macros and the parse/process chain
-		 * 
+		 *
 		 * @param  {object} macros object with keys naming the supported macros and functions handling the macros processing
 		 * if macros has a property '*' the function value will be taken as fallback for unknown macros.
 		 * if no fallback macro handle was provided the default macro handler will be be called (which will throw an exeption)
 		 * @param {object} options additional prosessing options
-		 * 
-		 * @return {array}  
+		 *
+		 * @return {array}
 		 *
 		 * @see process
 		 */
@@ -172,7 +172,7 @@
 	ov.macrop.process = process;
 
 	context.orangevolt = ov;
-})( 
-	((typeof( require)=='function' && {}) || (typeof( window)=='object' && window.orangevolt)) || {}, 
+})(
+	((typeof( require)=='function' && {}) || (typeof( window)=='object' && window.orangevolt)) || {},
 	(typeof( require)=='function' && module.exports) || (typeof( window)=='object' && window)
 );
