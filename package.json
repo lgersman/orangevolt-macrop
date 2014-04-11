@@ -1,6 +1,6 @@
 {
   "name": "orangevolt-macrop",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "./orangevolt-macrop.js",
   "dependencies": {},
   "devDependencies": {
