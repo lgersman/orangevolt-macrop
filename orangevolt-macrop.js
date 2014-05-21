@@ -10,8 +10,8 @@
 
 ;(function( ov, context) {
 
-	var TAG_REGEXP = /<<(\/?)((\w+[\:\-])*(\w+))((\s+((\w|\:|\-|\w[\w-]*\w)+)(\s*=\s*(?:\"[^\"]*?\"|'[^\']*?'|[^'\">\s]+))?)+\s*|\s*)(\/?)>>/i,
-		ATTR_REGEX = /((\w|\:|\-|\w[\w-]*\w)+)(\s*=\s*(?:\"([^\"]*?)\"|'([^\']*?)'|([^'\">\s]+)))?/i
+	var TAG_REGEXP = /<<(\/?)((\w+[\:\-])*(\w+))((\s+((\w|\!|\:|\-|\w[\w-]*\w)+)(\s*=\s*(?:\"[^\"]*?\"|'[^\']*?'|[^'\">\s]+))?)+\s*|\s*)(\/?)>>/i,
+		ATTR_REGEX = /(\!?(\w|\:|\-|\w[\w-]*\w)+)(\s*=\s*(?:\"([^\"]*?)\"|'([^\']*?)'|([^'\">\s]+)))?/i
 	;
 
 		/**
@@ -24,14 +24,15 @@
 		var attrs = {},
 			match
 		;
-
+		debugger
 		while( match = input.match( ATTR_REGEX)) {
 				// adjust import
 			input = input.substring( match.index + match[0].length);
-			var name	= match[ 1],
-				val		= match[ 4]!=null || match[ 5]!=null || match[ 6]!=null ?
+			var negotiate 	= match[ 1][0]=='!',
+				name		= match[ 1].substr( negotiate ? 1 : 0),
+				val			= match[ 4]!=null || match[ 5]!=null || match[ 6]!=null ?
 					(match[ 4] || match[ 5] || match[ 6] || "").replace(/^[\r\n]+|\s+$/g, '')
-					: true
+					: (negotiate ? false : true)
 			;
 
 			if( name in attrs) {

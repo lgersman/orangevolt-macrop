@@ -14,7 +14,7 @@ Dual licensed under the MIT or GPL Version 2 licenses.
 			it "start/end tag", ->
 				s = """
 					before html
-					<<tag attr1="val1" attr2=val2_1 attr2="val2_2" attr3>>
+					<<tag attr1="val1" attr2=val2_1 attr2="val2_2" attr3 !attr4>>
 					inside
 					content
 					<</tag>>
@@ -31,10 +31,11 @@ Dual licensed under the MIT or GPL Version 2 licenses.
 				expect( r[1].content).toEqual 'inside\ncontent'
 				expect( r[1].name).toEqual 'tag'
 				
-				expect( Object.keys r[1].attributes).toEqual ['attr1', 'attr2', 'attr3']
+				expect( Object.keys r[1].attributes).toEqual ['attr1', 'attr2', 'attr3', 'attr4']
 				expect( r[1].attributes.attr1).toEqual 'val1'
 				expect( r[1].attributes.attr2).toEqual [ 'val2_1', 'val2_2']
 				expect( r[1].attributes.attr3).toEqual true
+				expect( r[1].attributes.attr4).toEqual false
 
 				expect( r[2]).toEqual '\nafter html'
 
