@@ -131,6 +131,7 @@ They can be nested (when using different names for the nested macros) by recursi
 * Macros can be nested (when using different names for the nested macros) by recursively call the ``parse( input)`` method on ``macro.content`` 
 * Attributes names may contain ``:`` and ``-`` (execpt at start and end)
 * Attributes without a value (like *foo* in the example) are intepreted as flags and will have value ``true`` applied
+* Attributes without a value with a heading ``!`` will be intepreted as flag with value ``false`` applied
 * Attributes values may be wrapped in ``'``, ``"`` or simply provided as a token 
 * Macro names can be namespaced using ``:`` and/or ``-``. The namespace is just informative and will not be taken into account for evaluating the right macro.
 * Attribute values are allowed to be multiline

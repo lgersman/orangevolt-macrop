@@ -24,7 +24,6 @@
 		var attrs = {},
 			match
 		;
-		debugger
 		while( match = input.match( ATTR_REGEX)) {
 				// adjust import
 			input = input.substring( match.index + match[0].length);
