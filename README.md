@@ -1,3 +1,7 @@
+ATTENTION : [Orangevolt Gentle](http://lgersman.github.com/orangevolt-gentle/) contains a newer updated version of [orangevolt-macrop] completely rewritten in ES6.
+
+This repository is kept alive just for historical reasons.
+
 [![Build status](https://travis-ci.org/lgersman/orangevolt-macrop.png)](https://travis-ci.org/lgersman/orangevolt-macrop) 
 [![Dependency status](https://gemnasium.com/lgersman/orangevolt-macrop.png)](https://gemnasium.com/lgersman/orangevolt-macrop)
 [![NPM version](https://badge.fury.io/js/orangevolt-macrop.png)](http://badge.fury.io/js/orangevolt-macrop)
